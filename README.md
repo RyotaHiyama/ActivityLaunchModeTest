@@ -1,2 +1,4 @@
 # ActivityLaunchModeTest
 ActivityのLaunchModeとonNewIntentについて深く知るためのプログラム
+
+Qiitaに記事投稿予定
