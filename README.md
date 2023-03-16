@@ -1,0 +1,2 @@
+# ActivityLaunchModeTest
+ActivityのLaunchModeとonNewIntentについて深く知るためのプログラム
