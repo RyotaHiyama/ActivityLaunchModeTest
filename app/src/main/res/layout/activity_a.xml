@@ -47,7 +47,8 @@
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:id="@+id/singleTopChip"
                 android:text="singleTop"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onCheckedChanged=""/>
 
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
