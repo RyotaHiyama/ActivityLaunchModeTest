@@ -1,5 +1,6 @@
 package com.nokopi.activitylaunchmodetest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,10 +13,14 @@ class ActivityA : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_a)
+        var intentB = Intent(this, ActivityB::class.java)
 
-        binding.singleTopChip.setOnCheckedChangeListener { buttonView, isChecked ->
-            Toast.makeText(this, "aaaa", Toast.LENGTH_SHORT).show()
-            Log.i("aaa","aaa")
+        binding.singleTopChip.setOnCheckedChangeListener { _, isChecked ->
+            intentB = if (isChecked) {
+                Intent(this, ActivityB::class.java).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            } else {
+                Intent(this, ActivityB::class.java)
+            }
         }
 
     }
